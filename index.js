@@ -1,14 +1,16 @@
+//import libraries 
 const inquirer = require('inquirer');
 const { Triangle, Circle, Square } = require('./lib/shapes.js');
 const writeToFile = require('./lib/writeToFile.js')
 
+// list of colorkeywords and hexadecimal numbers
 const colorKeywords = [
     'red', 'green', 'blue', 'yellow', 'purple', 'pink', 'orange',
     'black', 'white', 'gray', 'brown', 'cyan', 'magenta', 'olive', 'lime'
 ];
 const hexColorPattern = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
 
-
+// prompt questions array
 const questions = [
     {
         type: 'input',
@@ -51,6 +53,7 @@ const questions = [
     },
 ];
 
+//run prompts and process response
 function init() {
     inquirer
         .prompt(questions)
@@ -80,7 +83,7 @@ function init() {
 
             userShape = chosenShape.render()
 
-            console.log('user shape -> ', userShape);
+            console.log(chosenShape);
 
             let chosenTextColor = textColor;
             let userText = text;
@@ -92,4 +95,5 @@ function init() {
         })
 };
 
+// initialize
 init()

@@ -31,7 +31,7 @@ describe('Triangle', () => {
     it('should set triangle color properly', () => {
         const shape = new Triangle();
         shape.setColor("blue");
-        expect(shape.render()).toEqual('<polygon points="0,200 300,200 150,0" fill="blue"/>');
+        expect(shape.render()).toEqual('<polygon points=\"150,0 300,300 0,300\" fill=\"blue\"/>');
     })
 })
 
