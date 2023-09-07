@@ -1,8 +1,6 @@
-//inquirer prompt
-
 const inquirer = require('inquirer');
 const { Triangle, Circle, Square } = require('./lib/shapes.js');
-const fs = require('fs');
+const writeToFile = require('./lib/writeToFile.js')
 
 const colorKeywords = [
     'red', 'green', 'blue', 'yellow', 'purple', 'pink', 'orange',
@@ -52,20 +50,6 @@ const questions = [
         }
     },
 ];
-
-function writeToFile (fileName, chosenShape, chosenTextColor, userText) {
-    let svgString = `
-    <svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
-      <g>
-        ${chosenShape}
-        <text x="150" y="165" text-anchor="middle" font-size="75" fill="${chosenTextColor}" font-family="Times New Roman">${userText}</text>
-      </g>
-    </svg>`;
-    
-    fs.writeFile(fileName, svgString, (err) => {
-        err ? console.log(err) : console.log("Generated logo.svg");
-      })
-}
 
 function init() {
     inquirer
