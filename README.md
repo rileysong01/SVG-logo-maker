@@ -26,6 +26,9 @@
 
   To initialize the app:
   ![screenshot of user typing in terminal](assets/userterminal.png)
+
+  Check the walkthrough video for more information:
+https://drive.google.com/file/d/1WlVD2wz8UlKXKxxTixP8qvBHOBp45vPc/view 
   
   ## Credits
   N/A 
